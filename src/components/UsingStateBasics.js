@@ -9,7 +9,11 @@ const UsingStateBasics = () => {
 	const [data, setData] = useState("State Value");
 
   const handleClick = () => {
-    setData('Hello, World')
+    if (data === 'State Value') {
+      setData('Hello, World');
+    } else {
+      setData('State Value');
+    }
   }
 
 	return (

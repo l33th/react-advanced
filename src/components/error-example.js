@@ -2,8 +2,9 @@ import React from "react";
 
 const ErrorExample = () => {
 	let title = "Error React";
-  
+
   const handleClick = () => {
+    title = 'Hello, ErrorsReact.'
     console.log(title);
   }
 

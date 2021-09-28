@@ -1,15 +1,15 @@
 import React from 'react'
-import ErrorExample from './components/error-example';
-import usingStateBasics from './components/usingStateBasics';
+import ErrorExample from './components/ErrorExample';
+import UsingStateBasics from './components/UsingStateBasics';
 
 function App() {
   return (
     <div className='container'>
       <h2>Advanced Tutorial</h2>
       <ErrorExample />
-      <usingStateBasics />
+      <UsingStateBasics />
     </div>
   )
 }
 
-export default App
+export default App;

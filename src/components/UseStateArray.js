@@ -16,7 +16,7 @@ const UseStateArray = () => {
 				return (
 					<div key={id} className='item'>
 						<h4>{name}</h4>
-            <button onClick={() => removeItem(id)}>remove item</button>
+            <button onClick={() => removeItem(id)}>remove</button>
 					</div>
 				);
 			})}

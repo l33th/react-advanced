@@ -4,7 +4,7 @@ import UseStateCounter from './components/UseStateCounter';
 function App() {
   return (
     <div className='container'>
-      <h2>Advanced React</h2>
+      <h1>Advanced React</h1>
       <UseStateCounter />
     </div>
   )

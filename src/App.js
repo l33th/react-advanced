@@ -1,11 +1,11 @@
 import React from 'react'
-import UseStateArray from './components/UseStateArray';
+import UseStateObject from './components/UseStateObject';
 
 function App() {
   return (
     <div className='container'>
       <h2>Advanced Tutorial</h2>
-      <UseStateArray />
+      <UseStateObject />
     </div>
   )
 }

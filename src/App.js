@@ -1,11 +1,11 @@
 import React from 'react'
-import UseStateObject from './components/UseStateObject';
+import UseStateCounter from './components/UseStateCounter';
 
 function App() {
   return (
     <div className='container'>
       <h2>Advanced React</h2>
-      <UseStateObject />
+      <UseStateCounter />
     </div>
   )
 }

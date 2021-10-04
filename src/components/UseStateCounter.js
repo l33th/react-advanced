@@ -16,12 +16,19 @@ const UseStateCounter = () => {
 		setValue(initalCount);
 	};
 
-	const complexIncrease = () => {
+	// const complexIncrease = () => {
+	// 	// setValue(value + 1);
+	// 	setTimeout(() => {
+	// 		setValue((prevState) => {
+	// 			return prevState + 1;
+	// 		});
+	// 	}, 2000);
+	// };
+
+	const complexIncreaseCustom = () => {
 		// setValue(value + 1);
 		setTimeout(() => {
-			setValue((prevState) => {
-				return prevState + 1;
-			});
+			setValue(prevState =>  prevState + 1)
 		}, 2000);
 	};
 
@@ -44,7 +51,7 @@ const UseStateCounter = () => {
 			<section style={{ margin: "4rem 0" }}>
 				<h2>more complex counter</h2>
 				<h1>{value}</h1>
-				<button className='btn' onClick={complexIncrease}>
+				<button className='btn' onClick={complexIncreaseCustom}>
 					increase later
 				</button>
 			</section>

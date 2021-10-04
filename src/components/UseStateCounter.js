@@ -3,14 +3,14 @@ import React, { useState } from "react";
 const UseStateCounter = () => {
 	const initalCount = 0;
 	const [value, setValue] = useState(initalCount);
-	
+
 	const iCounter = () => {
-		setValue(prevState => prevState + 1);
-	}
+		setValue((prevState) => prevState + 1);
+	};
 
 	const dCounter = () => {
-		setValue(prevState => prevState - 1);
-	}
+		setValue((prevState) => prevState - 1);
+	};
 
 	const reset = () => {
 		setValue(initalCount);
@@ -28,7 +28,7 @@ const UseStateCounter = () => {
 	const complexIncreaseCustom = () => {
 		// setValue(value + 1);
 		setTimeout(() => {
-			setValue(prevState =>  prevState + 1)
+			setValue((prevState) => prevState + 1);
 		}, 2000);
 	};
 

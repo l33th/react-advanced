@@ -1,9 +1,19 @@
 import React, { useState } from "react";
 
 const UseStateCounter = () => {
-	const [value, setValue] = useState(0);
+	const initalCount = 0;
+	const [value, setValue] = useState(initalCount);
+	
+	const iCounter = () => {
+		setValue(prevState => prevState + 1);
+	}
+
+	const dCounter = () => {
+		setValue(prevState => prevState - 1);
+	}
+
 	const reset = () => {
-		setValue(0);
+		setValue(initalCount);
 	};
 
 	const complexIncrease = () => {
@@ -20,10 +30,10 @@ const UseStateCounter = () => {
 			<section style={{ margin: "4rem 0" }}>
 				<h2>regular counter</h2>
 				<h1>{value}</h1>
-				<button className='btn' onClick={() => setValue(value + 1)}>
+				<button className='btn' onClick={iCounter}>
 					increase
 				</button>
-				<button className='btn' onClick={() => setValue(value - 1)}>
+				<button className='btn' onClick={dCounter}>
 					decrease
 				</button>
 				<button className='btn' onClick={reset}>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+// useEffect runs after every re-render by default
 const UseEffect = () => {
     const [value, setValue] = useState(0);
 	useEffect(() => {

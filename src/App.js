@@ -1,11 +1,11 @@
 import React from 'react'
-import UseEffect from './components/UseEffect';
+import UseEffectCleanup from './components/UseEffectCleanup';
 
 function App() {
   return (
     <div className='container'>
       <h1>Advanced React</h1>
-      <UseEffect />
+      <UseEffectCleanup />
     </div>
   )
 }

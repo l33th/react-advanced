@@ -5,8 +5,8 @@ const UseEffect = () => {
 	const [value, setValue] = useState(0);
 	useEffect(() => {
         // Will only update the title if the value is != 1
+        console.log("call useEffect");
 		if (value >= 1) {
-			console.log("call useEffect");
 			document.title = `New Messages(${value})`;
 		}
 	});

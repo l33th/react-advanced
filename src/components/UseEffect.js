@@ -4,12 +4,12 @@ import React, { useState, useEffect } from "react";
 const UseEffect = () => {
 	const [value, setValue] = useState(0);
 	useEffect(() => {
-        // Will only update the title if the value is != 1
-        console.log("call useEffect");
+		// Will only update the title if the value is != 1
+		console.log("call useEffect");
 		if (value >= 1) {
 			document.title = `New Messages(${value})`;
 		}
-	}, [value]);
+	}, [value]); // one useEffect runs on the initial render
 	console.log("render component");
 
 	return (

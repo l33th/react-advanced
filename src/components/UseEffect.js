@@ -10,6 +10,11 @@ const UseEffect = () => {
 			document.title = `New Messages(${value})`;
 		}
 	}, [value]); // one useEffect runs on the initial render
+
+    // This won't run because the value is not in the depency list
+	useEffect(() => {
+		console.log("hello, world");
+	}, []);
 	console.log("render component");
 
 	return (

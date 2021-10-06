@@ -1,5 +1,4 @@
-import { cleanup } from "@testing-library/react";
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const ShowHide = () => {
 	const [show, setShow] = useState(false);
@@ -7,18 +6,17 @@ const ShowHide = () => {
 	const Item = () => {
 		const [size, setSize] = useState(window.innerWidth);
 
+		// Checksize Function
 		const checkSize = () => {
 			setSize(window.innerWidth);
 		};
 
-		const cleanUp = () => {
-			window.removeEventListener("resize", checkSize);
-		};
-
+		// Use Effect
 		useEffect(() => {
 			window.addEventListener("resize", checkSize);
-			return cleanUp;
+			return () => window.removeEventListener("resize", checkSize);
 		}, []);
+
 		return (
 			<div style={{ marginTop: "2rem" }}>
 				<h1>window</h1>

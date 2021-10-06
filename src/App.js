@@ -1,11 +1,11 @@
 import React from "react";
-import ShortCircuitEvaluation from "./components/ShortCircuitEvaluation";
+import ShowHide from "./components/ShowHide";
 
 function App() {
 	return (
 		<div className='container'>
 			<h1>Advanced React</h1>
-			<ShortCircuitEvaluation />
+			<ShowHide />
 		</div>
 	);
 }

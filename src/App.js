@@ -1,11 +1,11 @@
 import React from 'react'
-import UseEffectFetchData from './components/UseEffectFetchData';
+import ConditionalRenderingMultipleReturns from './components/ConditionalRenderingMultipleReturns';
 
 function App() {
   return (
     <div className='container'>
       <h1>Advanced React</h1>
-      <UseEffectFetchData />
+      <ConditionalRenderingMultipleReturns />
     </div>
   )
 }

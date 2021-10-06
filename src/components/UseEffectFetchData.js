@@ -1,6 +1,6 @@
 import React from "react";
 
-const data = "https://api.github.com/users";
+const url = "https://api.github.com/users";
 
 const UseEffectFetchData = () => {
 	return (

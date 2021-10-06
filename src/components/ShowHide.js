@@ -1,3 +1,4 @@
+import { cleanup } from "@testing-library/react";
 import React, { useEffect, useState } from "react";
 
 const ShowHide = () => {
@@ -10,8 +11,13 @@ const ShowHide = () => {
 			setSize(window.innerWidth);
 		};
 
+		const cleanUp = () => {
+			window.removeEventListener("resize", checkSize);
+		};
+
 		useEffect(() => {
 			window.addEventListener("resize", checkSize);
+			return cleanUp;
 		}, []);
 		return (
 			<div style={{ marginTop: "2rem" }}>

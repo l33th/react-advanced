@@ -1,11 +1,11 @@
 import React from "react";
-import ShowHide from "./components/ShowHide";
+import FormsControlledInputs from "./components/FormsControlledInputs";
 
 function App() {
 	return (
 		<div className='container'>
 			<h1>Advanced React</h1>
-			<ShowHide />
+			<FormsControlledInputs />
 		</div>
 	);
 }

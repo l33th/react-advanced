@@ -19,9 +19,9 @@ const FormsControlledInputs = () => {
 							id='firstName'
 							name='firstName'
 							value={firstName}
+							placeholder='John Smith'
 						/>
 					</div>
-
 					<div className='form-control'>
 						<label htmlFor='email'>Email : </label>
 						<input
@@ -29,6 +29,7 @@ const FormsControlledInputs = () => {
 							id='email'
 							name='email'
 							value={email}
+							placeholder='johnsmith@email.com'
 						/>
 					</div>
 					<button type='submit'>add person</button>

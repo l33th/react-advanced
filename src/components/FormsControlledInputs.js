@@ -20,6 +20,7 @@ const FormsControlledInputs = () => {
 							name='firstName'
 							value={firstName}
 							placeholder='John Smith'
+							onChange={() => setFirstName}
 						/>
 					</div>
 					<div className='form-control'>

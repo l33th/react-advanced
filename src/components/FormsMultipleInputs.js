@@ -1,26 +1,22 @@
 import React, { useState } from "react";
 
 const FormsMultipleInputs = () => {
-	const [firstName, setFirstName] = useState("");
-	const [email, setEmail] = useState("");
-	const [age, setAge] = useState("");
+	// const [firstName, setFirstName] = useState("");
+	// const [email, setEmail] = useState("");
+	// const [age, setAge] = useState("");
+
+	const setup = {
+		firstName: "",
+		email: "",
+		age: "",
+	};
+
+	const [person, setPerson] = useState(setup);
 	const [people, setPeople] = useState([]);
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		if (firstName && email) {
-			const person = {
-				id: new Date().getTime().toString(),
-				firstName,
-				email,
-			};
-			setPeople((people) => [...people, person]);
-			setFirstName("");
-			setEmail("");
-		} else {
-			console.log("empty value");
-		}
-	};
+	const handleChange = (e) => {};
+
+	const handleSubmit = (e) => e.preventDefault();
 
 	return (
 		<>
@@ -32,9 +28,9 @@ const FormsMultipleInputs = () => {
 							type='text'
 							id='firstName'
 							name='firstName'
-							value={firstName}
+							value={person.firstName}
 							placeholder='John Smith'
-							onChange={(e) => setFirstName(e.target.value)}
+							onChange={handleChange}
 						/>
 					</div>
 					<div className='form-control'>
@@ -43,9 +39,9 @@ const FormsMultipleInputs = () => {
 							type='text'
 							id='email'
 							name='email'
-							value={email}
+							value={person.email}
 							placeholder='johnsmith@email.com'
-							onChange={(e) => setEmail(e.target.value)}
+							onChange={handleChange}
 						/>
 					</div>
 					<div className='form-control'>
@@ -54,12 +50,14 @@ const FormsMultipleInputs = () => {
 							type='text'
 							id='age'
 							name='age'
-							value={age}
+							value={person.age}
 							placeholder='33'
-							onChange={(e) => setAge(e.target.value)}
+							onChange={handleChange}
 						/>
 					</div>
-					<button type='submit'>add person</button>
+					<button type='submit' onClick={handleSubmit}>
+						add person
+					</button>
 				</form>
 				{people.map(({ id, firstName, email }) => {
 					return (

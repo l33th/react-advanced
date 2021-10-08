@@ -31,6 +31,7 @@ const FormsControlledInputs = () => {
 							name='email'
 							value={email}
 							placeholder='johnsmith@email.com'
+							onChange={(e) => setEmail(e.target.value)}
 						/>
 					</div>
 					<button type='submit'>add person</button>

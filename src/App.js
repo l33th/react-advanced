@@ -1,11 +1,11 @@
 import React from "react";
-import FormsControlledInputs from "./components/FormsControlledInputs";
+import FormsMultipleInputs from "./components/FormsMultipleInputs";
 
 function App() {
 	return (
 		<div className='container'>
 			<h1>Advanced React</h1>
-			<FormsControlledInputs />
+			<FormsMultipleInputs />
 		</div>
 	);
 }

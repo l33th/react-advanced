@@ -7,10 +7,13 @@ const FormsControlledInputs = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if(firstName && email) {
-			console.log('submit form');
+		if (firstName && email) {
+			const person = { firstName, email };
+			setPeople((people) => [...people, person]);
+			setFirstName("");
+			setEmail("");
 		} else {
-			console.log('empty value');
+			console.log("empty value");
 		}
 	};
 	return (

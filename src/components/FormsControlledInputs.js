@@ -3,10 +3,15 @@ import React, { useState } from "react";
 const FormsControlledInputs = () => {
 	const [firstName, setFirstName] = useState("");
 	const [email, setEmail] = useState("");
+	const [people, setPeople] = useState([]);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(firstName, email);
+		if(firstName && email) {
+			console.log('submit form');
+		} else {
+			console.log('empty value');
+		}
 	};
 	return (
 		<>

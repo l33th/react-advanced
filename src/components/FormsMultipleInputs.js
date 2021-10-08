@@ -14,9 +14,23 @@ const FormsMultipleInputs = () => {
 	const [person, setPerson] = useState(setup);
 	const [people, setPeople] = useState([]);
 
-	const handleChange = (e) => {};
+	const handleChange = (e) => {
+		const name = e.target.name;
+		const value = e.target.value;
+		setPerson({ ...person, [name]: value });
+	};
 
-	const handleSubmit = (e) => e.preventDefault();
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		if (person.firstName && person.email && person.email) {
+			const newPerson = {
+				...person,
+				id: new Date().getTime().toString(),
+			};
+			setPeople([...people, newPerson]);
+			setPerson({ firstName: "", email: "", age: "" });
+		}
+	};
 
 	return (
 		<>
@@ -59,10 +73,11 @@ const FormsMultipleInputs = () => {
 						add person
 					</button>
 				</form>
-				{people.map(({ id, firstName, email }) => {
+				{people.map(({ id, firstName, age, email }) => {
 					return (
 						<div className='item' key={id}>
 							<h4>{firstName}</h4>
+							<p>{age}</p>
 							<p>{email}</p>
 						</div>
 					);

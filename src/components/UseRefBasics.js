@@ -6,8 +6,8 @@ const UseRefBasics = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		console.log(refContainer.current.value);
 	};
-	console.log(refContainer);
 
 	return (
 		<div>
@@ -15,7 +15,7 @@ const UseRefBasics = () => {
 			<form className='form' onSubmit={handleSubmit}>
 				<div>
 					<input type='text' ref={refContainer} />
-					<button className='btn' type='button'>
+					<button className='btn' type='submit'>
 						submit
 					</button>
 				</div>

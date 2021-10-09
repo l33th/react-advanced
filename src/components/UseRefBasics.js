@@ -2,8 +2,9 @@ import React, { useRef } from "react";
 
 const UseRefBasics = () => {
 	const initialValue = null;
+	const refContainer = useRef(initialValue);
+
 	const handleSubmit = (e) => {
-		const refContainer = useRef(initialValue);
 		e.preventDefault();
 	};
 	console.log(refContainer);

@@ -22,7 +22,7 @@ const FormsMultipleInputs = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (person.firstName && person.email && person.email) {
+		if (person.firstName && person.email && person.age) {
 			const newPerson = {
 				...person,
 				id: new Date().getTime().toString(),

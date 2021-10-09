@@ -1,11 +1,11 @@
 import React from "react";
-import FormsMultipleInputs from "./components/FormsMultipleInputs";
+import UseRefBasics from "./components/UseRefBasics";
 
 function App() {
 	return (
 		<div className='container'>
 			<h1>Advanced React</h1>
-			<FormsMultipleInputs />
+			<UseRefBasics />
 		</div>
 	);
 }

@@ -23,7 +23,7 @@ const Index = () => {
 
 	return (
 		<>
-			{state.isModalOpen && <Modal />}
+			{state.isModalOpen && <Modal modalContent={state.modalContent} />}
 			<form onSubmit={handleSubmit} className='form'>
 				<div>
 					<input

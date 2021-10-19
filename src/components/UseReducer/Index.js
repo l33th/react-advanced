@@ -11,7 +11,7 @@ const reducer = (state, action) => {
 			modalContent: "item added",
 		};
 	}
-	return state;
+	throw new Error("no matching action");
 };
 
 const defaultState = {
@@ -29,6 +29,7 @@ const Index = () => {
 		if (name) {
 			dispatch({ type: "TESTING" });
 		} else {
+			dispatch({ type: "RANDOM" });
 		}
 	};
 

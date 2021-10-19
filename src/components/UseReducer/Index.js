@@ -5,8 +5,8 @@ import { data } from "../../data";
 const reducer = (state, action) => {};
 
 const defaultState = {
-	people: data,
-	isModalOpen: true,
+	people: [],
+	isModalOpen: false,
 	modalContent: "hello world",
 };
 

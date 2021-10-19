@@ -3,7 +3,14 @@ import Modal from "./Modal";
 import { data } from "../../data";
 
 const reducer = (state, action) => {
-	console.log(state, action);
+	if (action.type === "TESTING") {
+		return {
+			...state,
+			people: data,
+			isModalOpen: true,
+			modalContent: "item added",
+		};
+	}
 	return state;
 };
 

@@ -1,11 +1,11 @@
 import React from "react";
-import UseReducer from "./components/UseReducer";
+import UseReducer from "./components/UseReducer/Index";
 
 function App() {
 	return (
 		<div className='container'>
 			<h1>Advanced React</h1>
-			<UseReducer />
+			<UseReducer/>
 		</div>
 	);
 }

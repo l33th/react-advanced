@@ -1,11 +1,11 @@
 import React from "react";
-import PropDrilling from "./components/PropDrilling";
+import ContextAPI from "./components/ContextAPI";
 
 function App() {
 	return (
 		<div className='container'>
 			<h1>Advanced React</h1>
-			<PropDrilling/>
+			<ContextAPI />
 		</div>
 	);
 }

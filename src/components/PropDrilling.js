@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from "react";
+import { data } from "../data";
 
 const PropDrilling = () => {
-    return (
-        <div>
-            <h2>Prop Drilling</h2>
-        </div>
-    )
-}
+	const [people, setPeople] = useState(data);
+	return (
+		<section>
+			<h3>Prop Drilling</h3>
+		</section>
+	);
+};
 
-export default PropDrilling
+export default PropDrilling;

@@ -1,11 +1,11 @@
 import React from "react";
-import UseReducer from "./components/UseReducer/Index";
+import PropDrilling from "./components/PropDrilling";
 
 function App() {
 	return (
 		<div className='container'>
 			<h1>Advanced React</h1>
-			<UseReducer/>
+			<PropDrilling/>
 		</div>
 	);
 }

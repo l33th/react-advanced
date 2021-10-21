@@ -1,35 +1,11 @@
 import React, { useState, useReducer } from "react";
+// import modal
 import Modal from "./Modal";
 import { data } from "../../data";
+// import reducer
+import { reducer } from "./reducer";
 
-const reducer = (state, action) => {
-	if (action.type === "ADD_ITEM") {
-		const newPeople = [...state.people, action.payload];
-		return {
-			...state,
-			people: newPeople,
-			isModalOpen: true,
-			modalContent: "item added",
-		};
-	}
-	if (action.type === "NO_VALUE") {
-		return {
-			...state,
-			isModalOpen: true,
-			modalContent: "please enter value",
-		};
-	}
-	if (action.type === "CLOSE_MODAL") {
-		return {
-			...state,
-			isModalOpen: false,
-			modalContent: "please enter value",
-		};
-	}
-
-	throw new Error("no matching action");
-};
-
+// the default state
 const defaultState = {
 	people: [],
 	isModalOpen: false,
@@ -40,6 +16,7 @@ const Index = () => {
 	const [name, setName] = useState("");
 	const [state, dispatch] = useReducer(reducer, defaultState);
 
+	// handle submission
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (name) {

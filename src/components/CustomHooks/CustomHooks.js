@@ -1,7 +1,7 @@
 import React from "react";
 import useFetchHook from "./useFetchHook";
 
-const url = "https://course-api.com/javascript-store-products";
+const url = "https://course-api.netlify.app/api/javascript-store-products";
 
 const CustomHooks = () => {
 	const { loading, products } = useFetchHook(url);

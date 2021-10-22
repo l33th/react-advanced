@@ -1,5 +1,5 @@
 import React from "react";
-import CustomHooks from "./components/CustomHooks";
+import CustomHooks from "./components/CustomHooks/CustomHooks";
 
 function App() {
 	return (

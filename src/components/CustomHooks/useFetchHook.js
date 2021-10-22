@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 
-const url = 'https://course-api.com/javascript-store-products'
-
-const CustomHooks = () => {
+const useFetchHook = (url) => {
 	const [loading, setLoading] = useState(true);
 	const [products, setProducts] = useState([]);
 
@@ -15,13 +13,9 @@ const CustomHooks = () => {
 
 	useEffect(() => {
 		getProducts();
-	}, []);
-	console.log(products);
-	return (
-		<div>
-			<h2>{loading ? "loading..." : "data"}</h2>
-		</div>
-	);
+	}, [url]);
+
+	return { loading, products };
 };
 
-export default CustomHooks;
+export default useFetchHook;

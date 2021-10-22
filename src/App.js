@@ -1,11 +1,11 @@
 import React from "react";
-import ContextAPI from "./components/ContextAPI";
+import CustomHooks from "./components/CustomHooks";
 
 function App() {
 	return (
 		<div className='container'>
 			<h1>Advanced React</h1>
-			<ContextAPI />
+			<CustomHooks />
 		</div>
 	);
 }

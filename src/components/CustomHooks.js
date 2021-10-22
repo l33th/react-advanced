@@ -1,11 +1,27 @@
-import React from 'react'
+import { useState, useEffect } from "react";
+
+const url = 'https://course-api.com/javascript-store-products'
 
 const CustomHooks = () => {
-    return (
-        <div>
-            <h1>Custom Hooks</h1>
-        </div>
-    )
-}
+	const [loading, setLoading] = useState(true);
+	const [products, setProducts] = useState([]);
 
-export default CustomHooks
+	const getProducts = async () => {
+		const response = await fetch(url);
+		const products = await response.json();
+		setProducts(products);
+		setLoading(false);
+	};
+
+	useEffect(() => {
+		getProducts();
+	}, []);
+	console.log(products);
+	return (
+		<div>
+			<h2>{loading ? "loading..." : "data"}</h2>
+		</div>
+	);
+};
+
+export default CustomHooks;

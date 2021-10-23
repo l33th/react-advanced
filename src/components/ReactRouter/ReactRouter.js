@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import ReactRouterF from "../ReactRouter";
 
 const ReactRouter = () => {
-    return (
-        <div>
-            <h2>React Router Setup</h2>
-        </div>
-    )
-}
+	return (
+		<div>
+			<ReactRouterF />
+		</div>
+	);
+};
 
-export default ReactRouter
+export default ReactRouter;

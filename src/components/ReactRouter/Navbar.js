@@ -9,16 +9,17 @@ const Navbar = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        padding: '10px',
       }}
     >
       <ul>
-        <li>
+        <li style={{padding:'10px'}}>
           <Link to='/'>Home</Link>
         </li>
-        <li>
+        <li style={{padding:'10px'}}>
           <Link to='/about'>About</Link>
         </li>
-        <li>
+        <li style={{padding:'10px'}}>
           <Link to='/people'>People</Link>
         </li>
       </ul>

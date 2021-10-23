@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const UsingStateBasics = () => {
-
-	const [data, setData] = useState("State Value");
+  const [data, setData] = useState('State Value');
 
   const handleClick = () => {
     if (data === 'State Value') {
@@ -10,16 +9,16 @@ const UsingStateBasics = () => {
     } else {
       setData('State Value');
     }
-  }
+  };
 
-	return (
-		<>
-			<h1>{data}</h1>
+  return (
+    <>
+      <h1>{data}</h1>
       <button className='btn' onClick={handleClick}>
         change title
       </button>
-		</>
-	);
+    </>
+  );
 };
 
 export default UsingStateBasics;

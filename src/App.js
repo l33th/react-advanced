@@ -1,11 +1,11 @@
 import React from "react";
-import PropTypes from "./components/PropTypes";
+import ReactRouter from "./components/ReactRouter/ReactRouter";
 
 function App() {
 	return (
 		<div className='container'>
 			<h1>Advanced React</h1>
-			<PropTypes />
+			<ReactRouter />
 		</div>
 	);
 }

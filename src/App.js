@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactRouter from './components/ReactRouter/ReactRouter';
+import UseMemo from './components/UseMemo';
 
 function App() {
   return (
     <div className='container'>
       <h1>Advanced React</h1>
-      <ReactRouter />
+      <UseMemo />
     </div>
   );
 }

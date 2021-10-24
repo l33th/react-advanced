@@ -6,6 +6,11 @@ const Person = () => {
   const [name, setName] = useState('default-name');
   const { id } = useParams();
 
+  useEffect(() => {
+    const newPerson = data.find((person) => person.id === parseInt(id));
+    setName(newPerson.name);
+  });
+
   return (
     <div>
       <h2>{name}</h2>

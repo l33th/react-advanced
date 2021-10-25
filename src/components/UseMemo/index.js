@@ -40,7 +40,7 @@ const BigList = React.memo(({ products, addToCart }) => {
   );
 });
 
-const SingleProduct = ({ fields }) => {
+const SingleProduct = ({ fields, addToCart }) => {
   useEffect(() => {
     console.log('single product called');
   });
@@ -54,6 +54,7 @@ const SingleProduct = ({ fields }) => {
       <img src={image} alt={name} />
       <h4>{name}</h4>
       <p>${price}</p>
+      <button onClick={addToCart}>add to cart</button>
     </article>
   );
 };

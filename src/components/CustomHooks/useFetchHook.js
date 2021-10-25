@@ -1,21 +1,21 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from 'react';
 
 const useFetchHook = (url) => {
-	const [loading, setLoading] = useState(true);
-	const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState([]);
 
-	const getProducts = async () => {
-		const response = await fetch(url);
-		const products = await response.json();
-		setProducts(products);
-		setLoading(false);
-	};
+  const getProducts = useCallback(async () => {
+    const response = await fetch(url);
+    const products = await response.json();
+    setProducts(products);
+    setLoading(false);
+  }, [url]);
 
-	useEffect(() => {
-		getProducts();
-	}, [url]);
+  useEffect(() => {
+    getProducts();
+  }, [url]);
 
-	return { loading, products };
+  return { loading, products };
 };
 
 export default useFetchHook;

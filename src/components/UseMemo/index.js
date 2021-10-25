@@ -8,6 +8,11 @@ const url = 'https://course-api.com/javascript-store-products';
 const Index = () => {
   const { products } = useFetchHook(url);
   const [count, setCount] = useState(0);
+  const [cart, setCart] = useState(0);
+
+  const addToCart = () => {
+    setCart(cart + 1);
+  };
 
   return (
     <>
@@ -15,6 +20,7 @@ const Index = () => {
       <button className='btn' onClick={() => setCount(count + 1)}>
         click me
       </button>
+      <h1 style={{marginTop:'3rem'}}>cart: {cart}</h1>
       <BigList products={products} />
     </>
   );
@@ -24,7 +30,7 @@ const BigList = React.memo(({ products }) => {
   useEffect(() => {
     console.log('big list called');
   });
-  
+
   return (
     <section className='products'>
       {products.map((product) => {

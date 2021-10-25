@@ -21,12 +21,12 @@ const Index = () => {
         click me
       </button>
       <h1 style={{marginTop:'3rem'}}>cart: {cart}</h1>
-      <BigList products={products} />
+      <BigList products={products} addToCart={addToCart} />
     </>
   );
 };
 
-const BigList = React.memo(({ products }) => {
+const BigList = React.memo(({ products, addToCart }) => {
   useEffect(() => {
     console.log('big list called');
   });
@@ -34,7 +34,7 @@ const BigList = React.memo(({ products }) => {
   return (
     <section className='products'>
       {products.map((product) => {
-        return <SingleProduct key={product.id} {...product}></SingleProduct>;
+        return <SingleProduct key={product.id} {...product} addToCart={addToCart}></SingleProduct>;
       })}
     </section>
   );

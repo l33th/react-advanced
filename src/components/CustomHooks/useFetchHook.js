@@ -13,7 +13,7 @@ const useFetchHook = (url) => {
 
   useEffect(() => {
     getProducts();
-  }, [url]);
+  }, [url, getProducts]);
 
   return { loading, products };
 };

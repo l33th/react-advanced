@@ -10,9 +10,9 @@ const Index = () => {
   const [count, setCount] = useState(0);
   const [cart, setCart] = useState(0);
 
-  const addToCart = () => {
+  const addToCart = useCallback(() => {
     setCart(cart + 1);
-  };
+  }, [cart]);
 
   return (
     <>
@@ -20,7 +20,7 @@ const Index = () => {
       <button className='btn' onClick={() => setCount(count + 1)}>
         click me
       </button>
-      <h1 style={{marginTop:'3rem'}}>cart: {cart}</h1>
+      <h1 style={{ marginTop: '3rem' }}>cart: {cart}</h1>
       <BigList products={products} addToCart={addToCart} />
     </>
   );
@@ -34,7 +34,13 @@ const BigList = React.memo(({ products, addToCart }) => {
   return (
     <section className='products'>
       {products.map((product) => {
-        return <SingleProduct key={product.id} {...product} addToCart={addToCart}></SingleProduct>;
+        return (
+          <SingleProduct
+            key={product.id}
+            {...product}
+            addToCart={addToCart}
+          ></SingleProduct>
+        );
       })}
     </section>
   );

@@ -3,7 +3,7 @@ import useFetchHook from '../CustomHooks/useFetchHook';
 
 const url = 'https://course-api.com/javascript-store-products';
 
-// every time props or state changes, component re-renders
+// every time props or state changes, the component re-renders
 
 const calculateMostExpensive = (data) => {
   return (
